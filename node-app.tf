@@ -12,7 +12,7 @@ data "aws_ami" "node_app_ami" {
 
   filter {
     name   = "name"
-    values = ["packer-example*"]
+    values = ["jenkins-poc-packer*"]
   }
 
   filter {
@@ -20,7 +20,7 @@ data "aws_ami" "node_app_ami" {
     values = ["hvm"]
   }
 
-  owners = ["439988962471"]
+  owners = ["self"]
 }
 
 resource "aws_launch_configuration" "node_app_lc" {
